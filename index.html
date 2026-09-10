@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dickson Marfo Fosu | Telecommunication Engineering PhD Researcher</title>
+<meta name="description" content="Dickson Marfo Fosu is a Telecommunication Engineering PhD researcher at KNUST working on cloud-native network architecture, next-generation (5G/6G) systems and AI for network orchestration.">
+<meta name="author" content="Dickson Marfo Fosu">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Dickson Marfo Fosu">
+<meta property="og:description" content="Telecommunication Engineering PhD researcher at KNUST: cloud-native networks, 5G/6G, and AI for network orchestration.">
+<meta property="og:image" content="headshot.png">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%2315406b'/%3E%3Ctext x='50' y='72' text-anchor='middle' font-size='62' font-family='Georgia,serif' fill='white'%3ED%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink:    { DEFAULT: '#111827', soft: '#4b5563', mute: '#6b7280' },
+          accent: { DEFAULT: '#15406b', dark: '#0e2f50', soft: '#e8eef6' },
+          paper:  '#ffffff',
+          shell:  '#f6f7f9'
+        },
+        fontFamily: {
+          sans:  ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          serif: ['"Source Serif 4"', 'Georgia', 'ui-serif', 'serif']
+        }
+      }
+    }
+  };
+</script>
+
+<style>
+  html { scroll-behavior: smooth; }
+  /* The hidden attribute must beat Tailwind display utilities such as sm:flex,
+     otherwise JS-hidden update cards still render on wider screens. */
+  [hidden] { display: none !important; }
+  /* Keep anchored headings clear of the sticky mobile bar. */
+  section[id] { scroll-margin-top: 4.5rem; }
+  /* Publication numbering. Continuous across journals, conferences and preprints,
+     so adding or reordering an entry renumbers the list automatically. */
+  #publications { counter-reset: pub; }
+  .pub { counter-increment: pub; }
+  .pub-num::before { content: "[" counter(pub) "]"; }
+  /* Update summaries are clamped to four lines until expanded. */
+  .update-text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    overflow: hidden;
+  }
+  .update-text.is-open { display: block; overflow: visible; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+
+<body class="bg-paper font-sans text-ink antialiased">
+
+<a href="#about" class="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-50 focus:rounded-md focus:bg-accent focus:px-4 focus:py-2 focus:text-white">Skip to content</a>
+
+<!-- ================= MOBILE TOP BAR (hidden on lg and up) ================= -->
+<header class="sticky top-0 z-40 border-b border-gray-200 bg-paper/95 backdrop-blur lg:hidden">
+  <div class="flex items-center justify-between px-5 py-3">
+    <a href="#about" class="font-serif text-base font-semibold tracking-tight">Dickson&nbsp;Marfo&nbsp;Fosu</a>
+    <button id="navToggle" type="button" aria-expanded="false" aria-controls="mobileMenu"
+            class="inline-flex items-center justify-center rounded-md p-2 text-ink-soft hover:bg-gray-100">
+      <span class="sr-only">Toggle navigation</span>
+      <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16"/>
+      </svg>
+    </button>
+  </div>
+  <!-- Mirror of the sidebar nav. Keep both lists in sync when adding a section. -->
+  <nav id="mobileMenu" hidden class="border-t border-gray-200 bg-paper">
+    <ul class="flex flex-col px-5 py-2 text-sm font-medium text-ink-soft">
+      <li><a href="#about"        class="block py-2.5 hover:text-accent">About</a></li>
+      <li><a href="#news"         class="block py-2.5 hover:text-accent">Updates</a></li>
+      <li><a href="#education"    class="block py-2.5 hover:text-accent">Education</a></li>
+      <li><a href="#publications" class="block py-2.5 hover:text-accent">Publications</a></li>
+      <li><a href="#teaching"     class="block py-2.5 hover:text-accent">Teaching</a></li>
+      <li><a href="#contact"      class="block py-2.5 hover:text-accent">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="lg:grid lg:grid-cols-[19rem_minmax(0,1fr)]">
+
+  <!-- ================= PROFILE SIDEBAR ================= -->
+  <aside class="border-b border-gray-200 bg-shell px-5 py-10 sm:px-8 lg:sticky lg:top-0 lg:h-screen lg:overflow-y-auto lg:border-b-0 lg:border-r lg:px-8 lg:py-12">
+    <div class="mx-auto max-w-sm lg:max-w-none">
+
+      <img src="headshot.png"
+           alt="Portrait of Dickson Marfo Fosu"
+           width="480" height="480" loading="eager" decoding="async"
+           class="mx-auto aspect-square w-32 rounded-full border border-gray-200 bg-white object-cover shadow-sm sm:w-36 lg:mx-0 lg:w-40">
+
+      <h1 class="mt-5 text-center font-serif text-2xl font-bold leading-tight tracking-tight lg:text-left">Dickson Marfo Fosu</h1>
+      <p class="mt-2 text-center text-[15px] leading-relaxed text-ink-soft lg:text-left">
+        PhD Researcher, Telecommunication Engineering<br>
+        <span class="text-ink-mute">Responsible AI Lab (RAIL), KNUST, Kumasi, Ghana</span>
+      </p>
+
+      <!-- Sidebar nav: visible only on lg and up; the mobile bar carries its twin. -->
+      <nav class="mt-8 hidden lg:block">
+        <ul class="space-y-1 text-sm font-medium text-ink-soft">
+          <li><a href="#about"        class="block rounded-md px-3 py-2 transition hover:bg-white hover:text-accent">About</a></li>
+          <li><a href="#news"         class="block rounded-md px-3 py-2 transition hover:bg-white hover:text-accent">Updates</a></li>
+          <li><a href="#education"    class="block rounded-md px-3 py-2 transition hover:bg-white hover:text-accent">Education</a></li>
+          <li><a href="#publications" class="block rounded-md px-3 py-2 transition hover:bg-white hover:text-accent">Publications</a></li>
+          <li><a href="#teaching"     class="block rounded-md px-3 py-2 transition hover:bg-white hover:text-accent">Teaching</a></li>
+          <li><a href="#contact"      class="block rounded-md px-3 py-2 transition hover:bg-white hover:text-accent">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="mt-8 border-t border-gray-200 pt-6">
+        <p class="text-center text-sm lg:text-left">
+          <a href="mailto:dmfosu1@st.knust.edu.gh" class="font-medium text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent">dmfosu1@st.knust.edu.gh</a>
+        </p>
+        <ul class="mt-4 flex flex-wrap justify-center gap-x-4 gap-y-2 text-sm font-medium text-ink-soft lg:justify-start">
+          <li><a href="https://scholar.google.com/citations?user=xdYRFpgAAAAJ&amp;hl=en" class="hover:text-accent">Scholar</a></li>
+          <li><a href="https://www.linkedin.com/in/dmfosu/" class="hover:text-accent">LinkedIn</a></li>
+          <li><a href="https://orcid.org/0009-0005-3984-6139" class="hover:text-accent">ORCID</a></li>
+          <li><a href="https://github.com/dmfosu-dev" class="hover:text-accent">GitHub</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </aside>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="px-5 sm:px-8 lg:px-14 xl:px-20">
+    <div class="mx-auto max-w-3xl">
+
+      <!-- ---------------- ABOUT ---------------- -->
+      <section id="about" class="border-b border-gray-200 py-12 sm:py-16">
+        <h2 class="font-serif text-xl font-bold uppercase tracking-tight">About</h2>
+
+        <div class="mt-6 space-y-4 text-[17px] leading-relaxed text-ink-soft">
+          <p>
+            I work at the intersection of <strong class="font-semibold text-ink">cloud-native network architecture</strong>
+            and <strong class="font-semibold text-ink">applied AI</strong>, building adaptive and resilient
+            next-generation communication systems. My recent work designs control planes that anticipate load
+            rather than react to it, provisioning SDN controller capacity from real-time packet-level features
+            before saturation occurs.
+          </p>
+          <p>
+            Alongside that core technical research, I contribute to the
+            <strong class="font-semibold text-ink">Responsible AI Lab (RAIL)</strong> at KNUST, where my focus is
+            AI governance and inclusivity for Ghana and other Low- and Middle-Income Countries: from digital
+            sovereignty in government cloud procurement to scaling AI capacity across African higher education.
+          </p>
+        </div>
+
+        <h3 class="mt-8 text-xs font-semibold uppercase tracking-[0.16em] text-ink-mute">Research interests</h3>
+        <ul class="mt-3 flex flex-wrap gap-2">
+          <li class="rounded-full bg-accent-soft px-3.5 py-1.5 text-sm font-medium text-accent">Wireless Communications &amp; Networking Systems</li>
+          <li class="rounded-full bg-accent-soft px-3.5 py-1.5 text-sm font-medium text-accent">Next-Generation Systems (5G/6G)</li>
+          <li class="rounded-full bg-accent-soft px-3.5 py-1.5 text-sm font-medium text-accent">AI/ML for Network Optimisation &amp; Orchestration</li>
+        </ul>
+      </section>
+
+      <!-- ---------------- UPDATES ---------------- -->
+      <!-- Reverse chronological, newest first. To add an entry, copy one <li>, change the
+           date badge, headline, summary and photo list, and paste it at the top.
+           Photos are plain <img> thumbnails linking to the full file; keep loading="lazy". -->
+      <section id="news" class="border-b border-gray-200 py-12 sm:py-16">
+        <h2 class="font-serif text-xl font-bold uppercase tracking-tight">Recent Updates</h2>
+        <p class="mt-2 text-ink-mute">News, talks and milestones.</p>
+
+        <ol id="newsList" class="mt-8 space-y-3">
+
+          <li class="rounded-lg border border-gray-200 bg-paper p-5 transition hover:border-accent/40 hover:shadow-sm sm:flex sm:gap-5">
+            <span class="inline-block shrink-0 rounded bg-shell px-2.5 py-1 font-mono text-xs font-semibold uppercase tracking-wide text-ink-mute sm:mt-0.5 sm:w-32 sm:text-center">5 Sep 2026</span>
+            <div class="mt-3 min-w-0 flex-1 sm:mt-0">
+              <h3 class="font-serif text-base font-bold leading-snug tracking-tight text-ink">Guest speaker on Responsible AI use and ethics for school students</h3>
+              <p class="update-text mt-1.5 text-[15px] leading-relaxed text-ink-soft">
+                Joined Py4High for a free online webinar helping JHS and SHS students use AI tools safely and
+                responsibly, with parents, teachers and working professionals also welcome.
+              </p>
+              <button type="button" class="update-toggle mt-1 text-sm font-medium text-accent hover:underline" hidden>Read more</button>
+              <ul class="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-4">
+                <li><a href="py4high.jpg"><img src="py4high.jpg" alt="Py4High webinar announcement on responsible AI use and ethics" loading="lazy" class="aspect-[4/5] w-full rounded border border-gray-200 object-cover object-top transition hover:opacity-90"></a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="rounded-lg border border-gray-200 bg-paper p-5 transition hover:border-accent/40 hover:shadow-sm sm:flex sm:gap-5">
+            <span class="inline-block shrink-0 rounded bg-shell px-2.5 py-1 font-mono text-xs font-semibold uppercase tracking-wide text-ink-mute sm:mt-0.5 sm:w-32 sm:text-center">6&ndash;10 Jul 2026</span>
+            <div class="mt-3 min-w-0 flex-1 sm:mt-0">
+              <h3 class="font-serif text-base font-bold leading-snug tracking-tight text-ink">Young Author Recognition Award at ITU Kaleidoscope 2026, Geneva</h3>
+              <p class="update-text mt-1.5 text-[15px] leading-relaxed text-ink-soft">
+                Presented "Enforceable Digital Sovereignty in Government Cloud Procurement" at the 16th ITU
+                Kaleidoscope Academic Conference, held alongside the AI for Good Global Summit. The paper argues
+                that hosting data locally does not by itself deliver sovereignty: if key custody, administrative
+                access or exit terms sit with a foreign vendor, "local" is sovereign in name only. It proposes a
+                Sovereignty Audit Lens across five testable dimensions (locality, portability, observability,
+                reversibility, resilience) and a seven-clause procurement schedule that turns them into
+                enforceable contract terms. My co-author Prince Dawson Tetteh and I both received Young Author
+                Recognition Awards.
+              </p>
+              <button type="button" class="update-toggle mt-1 text-sm font-medium text-accent hover:underline" hidden>Read more</button>
+              <p class="mt-2 text-sm font-medium">
+                <a href="https://doi.org/10.23919/ITUK70038.2026.11632520" class="text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent">Read the paper</a>
+              </p>
+              <ul class="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-4">
+                <li><a href="kaleidoscope1.jpg"><img src="kaleidoscope1.jpg" alt="ITU Kaleidoscope 2026 conference in Geneva" loading="lazy" class="aspect-[4/5] w-full rounded border border-gray-200 object-cover object-top transition hover:opacity-90"></a></li>
+                <li><a href="kaleidoscope2.jpg"><img src="kaleidoscope2.jpg" alt="ITU Kaleidoscope 2026 conference in Geneva" loading="lazy" class="aspect-[4/5] w-full rounded border border-gray-200 object-cover object-top transition hover:opacity-90"></a></li>
+                <li><a href="kaleidoscope3.jpg"><img src="kaleidoscope3.jpg" alt="ITU Kaleidoscope 2026 conference in Geneva" loading="lazy" class="aspect-[4/5] w-full rounded border border-gray-200 object-cover object-top transition hover:opacity-90"></a></li>
+                <li><a href="kaleidoscope4.jpg"><img src="kaleidoscope4.jpg" alt="ITU Kaleidoscope 2026 conference in Geneva" loading="lazy" class="aspect-[4/5] w-full rounded border border-gray-200 object-cover object-top transition hover:opacity-90"></a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="rounded-lg border border-gray-200 bg-paper p-5 transition hover:border-accent/40 hover:shadow-sm sm:flex sm:gap-5">
+            <span class="inline-block shrink-0 rounded bg-shell px-2.5 py-1 font-mono text-xs font-semibold uppercase tracking-wide text-ink-mute sm:mt-0.5 sm:w-32 sm:text-center">10 Jul 2026</span>
+            <div class="mt-3 min-w-0 flex-1 sm:mt-0">
+              <h3 class="font-serif text-base font-bold leading-snug tracking-tight text-ink">Visit to CERN</h3>
+              <p class="update-text mt-1.5 text-[15px] leading-relaxed text-ink-soft">
+                Visited CERN in Geneva, Switzerland.
+              </p>
+              <button type="button" class="update-toggle mt-1 text-sm font-medium text-accent hover:underline" hidden>Read more</button>
+              <ul class="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-4">
+                <li><a href="cern.jpg"><img src="cern.jpg" alt="Visit to CERN in Geneva" loading="lazy" class="aspect-[4/5] w-full rounded border border-gray-200 object-cover object-top transition hover:opacity-90"></a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="rounded-lg border border-gray-200 bg-paper p-5 transition hover:border-accent/40 hover:shadow-sm sm:flex sm:gap-5">
+            <span class="inline-block shrink-0 rounded bg-shell px-2.5 py-1 font-mono text-xs font-semibold uppercase tracking-wide text-ink-mute sm:mt-0.5 sm:w-32 sm:text-center">18 Jun 2026</span>
+            <div class="mt-3 min-w-0 flex-1 sm:mt-0">
+              <h3 class="font-serif text-base font-bold leading-snug tracking-tight text-ink">Google and Government of Ghana public policy forum, Accra</h3>
+              <p class="update-text mt-1.5 text-[15px] leading-relaxed text-ink-soft">
+                Took part with RAIL colleagues in the forum at the Google AI Community Centre, held under the theme
+                "Driving Digital Transformation in Ghana Together" and bringing together government, Google
+                Sub-Saharan Africa, the U.S. Embassy in Ghana, academia and industry. Discussion covered the One
+                Million Coders Programme, the WAXAL open-source dataset covering Akan, Ewe, Fante, Dagaare and
+                Dagbani, and the National AI Strategy 2025 to 2035.
+              </p>
+              <button type="button" class="update-toggle mt-1 text-sm font-medium text-accent hover:underline" hidden>Read more</button>
+              <p class="mt-2 text-sm font-medium">
+                <a href="https://lnkd.in/d2hhqkW3" class="text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent">Read the full post</a>
+              </p>
+              <ul class="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-4">
+                <li><a href="google_event.jpg"><img src="google_event.jpg" alt="Google and Government of Ghana public policy forum in Accra" loading="lazy" class="aspect-[4/5] w-full rounded border border-gray-200 object-cover object-top transition hover:opacity-90"></a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="rounded-lg border border-gray-200 bg-paper p-5 transition hover:border-accent/40 hover:shadow-sm sm:flex sm:gap-5">
+            <span class="inline-block shrink-0 rounded bg-shell px-2.5 py-1 font-mono text-xs font-semibold uppercase tracking-wide text-ink-mute sm:mt-0.5 sm:w-32 sm:text-center">6 Jun 2026</span>
+            <div class="mt-3 min-w-0 flex-1 sm:mt-0">
+              <h3 class="font-serif text-base font-bold leading-snug tracking-tight text-ink">Prototype testing session with persons with disabilities</h3>
+              <p class="update-text mt-1.5 text-[15px] leading-relaxed text-ink-soft">
+                RAIL's Responsible AI and Inclusivity team ran a prototype testing session at the Centre for
+                Disability and Rehabilitation Studies, part of co-designing assistive technologies with the people
+                who will use them under an inclusivity-by-design approach.
+              </p>
+              <button type="button" class="update-toggle mt-1 text-sm font-medium text-accent hover:underline" hidden>Read more</button>
+              <p class="mt-2 text-sm font-medium">
+                <a href="https://lnkd.in/dGdm3KZD" class="text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent">Read the full post</a>
+              </p>
+              <ul class="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-4">
+                <li><a href="RAIL_prototype_testing.jpg"><img src="RAIL_prototype_testing.jpg" alt="RAIL prototype testing session at the Centre for Disability and Rehabilitation Studies" loading="lazy" class="aspect-[4/5] w-full rounded border border-gray-200 object-cover object-top transition hover:opacity-90"></a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="rounded-lg border border-gray-200 bg-paper p-5 transition hover:border-accent/40 hover:shadow-sm sm:flex sm:gap-5">
+            <span class="inline-block shrink-0 rounded bg-shell px-2.5 py-1 font-mono text-xs font-semibold uppercase tracking-wide text-ink-mute sm:mt-0.5 sm:w-32 sm:text-center">17&ndash;20 Feb 2026</span>
+            <div class="mt-3 min-w-0 flex-1 sm:mt-0">
+              <h3 class="font-serif text-base font-bold leading-snug tracking-tight text-ink">India AI Impact Summit, New Delhi</h3>
+              <p class="update-text mt-1.5 text-[15px] leading-relaxed text-ink-soft">
+                Represented RAIL at the India AI Impact Action Summit at Bharat Mandapam, and at AI Safety Connect
+                Day, which gathered more than 250 leaders from government, frontier AI labs, research institutions
+                and civil society. The summit produced the New Delhi Declaration on AI, since endorsed by 92
+                countries and international organisations. The sovereign AI agenda on display, building ecosystems
+                that serve people in their own languages and on their own terms, is a useful template for what
+                Africa should be asking for.
+              </p>
+              <button type="button" class="update-toggle mt-1 text-sm font-medium text-accent hover:underline" hidden>Read more</button>
+              <p class="mt-2 text-sm font-medium">
+                <a href="https://lnkd.in/evYbHNpC" class="text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent">Read the full post</a>
+              </p>
+              <ul class="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-4">
+                <li><a href="indiaai_1.jpg"><img src="indiaai_1.jpg" alt="India AI Impact Action Summit in New Delhi" loading="lazy" class="aspect-[4/5] w-full rounded border border-gray-200 object-cover object-top transition hover:opacity-90"></a></li>
+                <li><a href="indiaai_2.jpg"><img src="indiaai_2.jpg" alt="India AI Impact Action Summit in New Delhi" loading="lazy" class="aspect-[4/5] w-full rounded border border-gray-200 object-cover object-top transition hover:opacity-90"></a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="rounded-lg border border-gray-200 bg-paper p-5 transition hover:border-accent/40 hover:shadow-sm sm:flex sm:gap-5">
+            <span class="inline-block shrink-0 rounded bg-shell px-2.5 py-1 font-mono text-xs font-semibold uppercase tracking-wide text-ink-mute sm:mt-0.5 sm:w-32 sm:text-center">26 Nov 2025</span>
+            <div class="mt-3 min-w-0 flex-1 sm:mt-0">
+              <h3 class="font-serif text-base font-bold leading-snug tracking-tight text-ink">MPhil graduation</h3>
+              <p class="update-text mt-1.5 text-[15px] leading-relaxed text-ink-soft">
+                Graduated with an MPhil in Telecommunication Engineering from KNUST.
+              </p>
+              <button type="button" class="update-toggle mt-1 text-sm font-medium text-accent hover:underline" hidden>Read more</button>
+              <ul class="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-4">
+                <li><a href="mphil_grad.jpg"><img src="mphil_grad.jpg" alt="MPhil graduation at KNUST" loading="lazy" class="aspect-[4/5] w-full rounded border border-gray-200 object-cover object-top transition hover:opacity-90"></a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="rounded-lg border border-gray-200 bg-paper p-5 transition hover:border-accent/40 hover:shadow-sm sm:flex sm:gap-5">
+            <span class="inline-block shrink-0 rounded bg-shell px-2.5 py-1 font-mono text-xs font-semibold uppercase tracking-wide text-ink-mute sm:mt-0.5 sm:w-32 sm:text-center">17&ndash;20 Nov 2025</span>
+            <div class="mt-3 min-w-0 flex-1 sm:mt-0">
+              <h3 class="font-serif text-base font-bold leading-snug tracking-tight text-ink">Digital Futures Symposium, Cape Town</h3>
+              <p class="update-text mt-1.5 text-[15px] leading-relaxed text-ink-soft">
+                Represented RAIL at the Digital Futures Symposium with a lightning talk on how to think concretely
+                about AI infrastructural sovereignty in Africa, alongside a site visit to the Centre for High
+                Performance Computing managed by the CSIR. Walking the facility made the point plainly: sovereignty
+                questions start with who owns, funds and governs compute infrastructure, and who across the
+                continent actually gets access to it.
+              </p>
+              <button type="button" class="update-toggle mt-1 text-sm font-medium text-accent hover:underline" hidden>Read more</button>
+              <p class="mt-2 text-sm font-medium">
+                <a href="https://lnkd.in/e6_jNyBf" class="text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent">Read the full post</a>
+              </p>
+              <ul class="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-4">
+                <li><a href="dfs_1.jpg"><img src="dfs_1.jpg" alt="Digital Futures Symposium in Cape Town" loading="lazy" class="aspect-[4/5] w-full rounded border border-gray-200 object-cover object-top transition hover:opacity-90"></a></li>
+                <li><a href="dfs_2.jpg"><img src="dfs_2.jpg" alt="Centre for High Performance Computing in Cape Town" loading="lazy" class="aspect-[4/5] w-full rounded border border-gray-200 object-cover object-top transition hover:opacity-90"></a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="rounded-lg border border-gray-200 bg-paper p-5 transition hover:border-accent/40 hover:shadow-sm sm:flex sm:gap-5">
+            <span class="inline-block shrink-0 rounded bg-shell px-2.5 py-1 font-mono text-xs font-semibold uppercase tracking-wide text-ink-mute sm:mt-0.5 sm:w-32 sm:text-center">23 Apr 2025</span>
+            <div class="mt-3 min-w-0 flex-1 sm:mt-0">
+              <h3 class="font-serif text-base font-bold leading-snug tracking-tight text-ink">Second National AI Strategy consultation, KNUST</h3>
+              <p class="update-text mt-1.5 text-[15px] leading-relaxed text-ink-soft">
+                Attended the second National AI Strategy consultation at KNUST, a step toward finalising Ghana's
+                National AI Strategy, covering education, ethical AI governance, and the curation of indigenous
+                datasets for locally tailored AI solutions.
+              </p>
+              <button type="button" class="update-toggle mt-1 text-sm font-medium text-accent hover:underline" hidden>Read more</button>
+              <ul class="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-4">
+                <li><a href="ai_strategy.jpg"><img src="ai_strategy.jpg" alt="National AI Strategy consultation at KNUST" loading="lazy" class="aspect-[4/5] w-full rounded border border-gray-200 object-cover object-top transition hover:opacity-90"></a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="rounded-lg border border-gray-200 bg-paper p-5 transition hover:border-accent/40 hover:shadow-sm sm:flex sm:gap-5">
+            <span class="inline-block shrink-0 rounded bg-shell px-2.5 py-1 font-mono text-xs font-semibold uppercase tracking-wide text-ink-mute sm:mt-0.5 sm:w-32 sm:text-center">9&ndash;11 Feb 2025</span>
+            <div class="mt-3 min-w-0 flex-1 sm:mt-0">
+              <h3 class="font-serif text-base font-bold leading-snug tracking-tight text-ink">AI Action Summit, Paris Peace Forum</h3>
+              <p class="update-text mt-1.5 text-[15px] leading-relaxed text-ink-soft">
+                Part of the RAIL team presenting "Care for Rare Conditions (Diseases) Using Artificial
+                Intelligence" at the AI Action Summit, led by the lab's Principal Investigator, Prof. Jerry John
+                Kponyo, with Musah Ibrahim Ali.
+              </p>
+              <button type="button" class="update-toggle mt-1 text-sm font-medium text-accent hover:underline" hidden>Read more</button>
+              <ul class="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-4">
+                <li><a href="paris1.jpg"><img src="paris1.jpg" alt="AI Action Summit at the Paris Peace Forum" loading="lazy" class="aspect-[4/5] w-full rounded border border-gray-200 object-cover object-top transition hover:opacity-90"></a></li>
+                <li><a href="paris2.jpg"><img src="paris2.jpg" alt="AI Action Summit at the Paris Peace Forum" loading="lazy" class="aspect-[4/5] w-full rounded border border-gray-200 object-cover object-top transition hover:opacity-90"></a></li>
+                <li><a href="paris3.jpg"><img src="paris3.jpg" alt="AI Action Summit at the Paris Peace Forum" loading="lazy" class="aspect-[4/5] w-full rounded border border-gray-200 object-cover object-top transition hover:opacity-90"></a></li>
+              </ul>
+            </div>
+          </li>
+
+        </ol>
+
+        <!-- Revealed four at a time by the script below. With JS off, every entry shows. -->
+        <div class="mt-6">
+          <button id="newsMore" type="button" hidden
+                  class="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-paper px-5 py-2.5 text-sm font-semibold text-ink transition hover:border-accent hover:text-accent">
+            Load more
+            <span class="text-ink-mute" aria-hidden="true">&darr;</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- ---------------- EDUCATION ---------------- -->
+      <section id="education" class="border-b border-gray-200 py-12 sm:py-16">
+        <h2 class="font-serif text-xl font-bold uppercase tracking-tight">Education</h2>
+
+        <div class="mt-8 space-y-8 border-l-2 border-gray-200 pl-6">
+
+          <article class="relative">
+            <span class="absolute -left-[1.9rem] top-1.5 h-3 w-3 rounded-full border-2 border-accent bg-paper" aria-hidden="true"></span>
+            <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+              <h3 class="font-serif text-xl font-semibold">PhD, Telecommunication Engineering</h3>
+              <span class="rounded bg-accent-soft px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-accent">Jan 2026 &ndash; Present</span>
+            </div>
+            <p class="mt-1.5 text-[15px] text-ink-soft">Kwame Nkrumah University of Science and Technology (KNUST), Kumasi, Ghana</p>
+          </article>
+
+          <article class="relative">
+            <span class="absolute -left-[1.9rem] top-1.5 h-3 w-3 rounded-full border-2 border-gray-300 bg-paper" aria-hidden="true"></span>
+            <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+              <h3 class="font-serif text-xl font-semibold">MPhil, Telecommunication Engineering</h3>
+              <span class="rounded bg-shell px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-ink-mute">Jan 2024 &ndash; Sep 2025</span>
+            </div>
+            <p class="mt-1.5 text-[15px] text-ink-soft">Kwame Nkrumah University of Science and Technology (KNUST), Kumasi, Ghana</p>
+            <p class="mt-2 text-[15px] leading-relaxed text-ink-mute">
+              <span class="font-medium text-ink-soft">Thesis:</span> A Preemptive Proactive Scaling Approach for Faster
+              SDN Controller Scaling Using Kubernetes Orchestration.
+            </p>
+          </article>
+
+          <article class="relative">
+            <span class="absolute -left-[1.9rem] top-1.5 h-3 w-3 rounded-full border-2 border-gray-300 bg-paper" aria-hidden="true"></span>
+            <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+              <h3 class="font-serif text-xl font-semibold">BSc, Telecommunication Engineering</h3>
+              <span class="rounded bg-shell px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-ink-mute">Sep 2018 &ndash; Oct 2022</span>
+            </div>
+            <p class="mt-1.5 text-[15px] text-ink-soft">Kwame Nkrumah University of Science and Technology (KNUST), Kumasi, Ghana</p>
+            <p class="mt-2 text-[15px] leading-relaxed text-ink-mute">
+              <span class="font-medium text-ink-soft">Thesis:</span> Comparative Performance Evaluation of FANET Routing
+              Protocols Across Mobility Models.
+            </p>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ---------------- PUBLICATIONS ---------------- -->
+      <!-- Entries are numbered by CSS counter (see the <style> block); never type a numeral.
+           Within each group, newest first. Every entry resolves through its DOI, which is the
+           route to the PDF, so there are no separate PDF or Slides links. -->
+      <section id="publications" class="border-b border-gray-200 py-12 sm:py-16">
+        <div class="flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <h2 class="font-serif text-xl font-bold uppercase tracking-tight">Publications</h2>
+            <p class="mt-2 text-ink-mute">Selected from 12 works.</p>
+          </div>
+          <a href="https://scholar.google.com/citations?user=xdYRFpgAAAAJ&amp;hl=en" class="text-sm font-semibold text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent">Full list on Google Scholar &rarr;</a>
+        </div>
+
+        <!-- Journal articles -->
+        <h3 class="mt-10 text-xs font-semibold uppercase tracking-[0.16em] text-ink-mute">Peer-Reviewed Journal Articles</h3>
+        <ol class="mt-6 list-none space-y-8">
+
+          <li class="pub relative pl-8 sm:pl-10">
+            <span class="pub-num absolute left-0 top-1 font-mono text-sm text-ink-mute" aria-hidden="true"></span>
+            <p class="font-serif text-base font-bold leading-snug tracking-tight text-ink">A Foundational Architecture for Engineering an Afrocentric AI Training and Renewal Platform</p>
+            <p class="mt-1.5 text-[15px] leading-relaxed text-ink-soft">
+              Nsarkoh, E., Banful, A. B., Arthur, J., <span class="font-semibold text-ink">Fosu, D. M.</span>, Tetteh, P. D., &amp; Kponyo, J. J.
+            </p>
+            <p class="mt-1 text-[15px] italic text-ink-mute">Discover Artificial Intelligence (Springer Nature), 5(1), 292, 2025.</p>
+            <p class="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-sm font-medium">
+              <a href="https://doi.org/10.1007/s44163-025-00571-8" class="text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent">DOI</a>
+              <a href="https://doi.org/10.21203/rs.3.rs-7290976/v1" class="text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent">Preprint</a>
+            </p>
+          </li>
+
+          <li class="pub relative pl-8 sm:pl-10">
+            <span class="pub-num absolute left-0 top-1 font-mono text-sm text-ink-mute" aria-hidden="true"></span>
+            <p class="font-serif text-base font-bold leading-snug tracking-tight text-ink">Techno-neocolonialism: An Emerging Risk in the Artificial Intelligence Revolution</p>
+            <p class="mt-1.5 text-[15px] leading-relaxed text-ink-soft">
+              Kponyo, J. J., <span class="font-semibold text-ink">Fosu, D. M.</span>, Owusu, F. E. B., Ali, M. I., &amp; Ahiamadzor, M. M.
+            </p>
+            <p class="mt-1 text-[15px] italic text-ink-mute">Trayectorias Humanas Trascontinentales, (18), 2024.</p>
+            <p class="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-sm font-medium">
+              <a href="https://doi.org/10.25965/trahs.6382" class="text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent">DOI</a>
+            </p>
+          </li>
+
+        </ol>
+
+        <!-- Conference papers -->
+        <h3 class="mt-12 text-xs font-semibold uppercase tracking-[0.16em] text-ink-mute">Peer-Reviewed Conference Papers</h3>
+        <ol class="mt-6 list-none space-y-8">
+
+          <li class="pub relative pl-8 sm:pl-10">
+            <span class="pub-num absolute left-0 top-1 font-mono text-sm text-ink-mute" aria-hidden="true"></span>
+            <p class="font-serif text-base font-bold leading-snug tracking-tight text-ink">Enforceable Digital Sovereignty in Government Cloud Procurement</p>
+            <p class="mt-1.5 text-[15px] leading-relaxed text-ink-soft">
+              <span class="font-semibold text-ink">Fosu, D. M.</span>, Arthur, J., Tetteh, P. D., Banful, A. B., &amp; Kponyo, J. J.
+            </p>
+            <p class="mt-1 text-[15px] italic text-ink-mute">ITU Kaleidoscope 2026: AI and Frontier Technologies for Good, ITU, 293&ndash;298.</p>
+            <p class="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-sm font-medium">
+              <a href="https://doi.org/10.23919/ITUK70038.2026.11632520" class="text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent">DOI</a>
+            </p>
+          </li>
+
+          <li class="pub relative pl-8 sm:pl-10">
+            <span class="pub-num absolute left-0 top-1 font-mono text-sm text-ink-mute" aria-hidden="true"></span>
+            <p class="font-serif text-base font-bold leading-snug tracking-tight text-ink">Edge-Native LLMs: A Sustainable Architecture for Offline-First Education in Rural 6G Networks</p>
+            <p class="mt-1.5 text-[15px] leading-relaxed text-ink-soft">
+              Tetteh, P. D., Kponyo, J. J., Banful, A. B., <span class="font-semibold text-ink">Fosu, D. M.</span>, Arthur, J., &amp; Frowne, C. I.
+            </p>
+            <p class="mt-1 text-[15px] italic text-ink-mute">ITU Kaleidoscope 2026: AI and Frontier Technologies for Good (ITU K), 313&ndash;320.</p>
+            <p class="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-sm font-medium">
+              <a href="https://doi.org/10.23919/ITUK70038.2026.11632990" class="text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent">DOI</a>
+            </p>
+          </li>
+
+          <li class="pub relative pl-8 sm:pl-10">
+            <span class="pub-num absolute left-0 top-1 font-mono text-sm text-ink-mute" aria-hidden="true"></span>
+            <p class="font-serif text-base font-bold leading-snug tracking-tight text-ink">Scaling Successful AI Initiatives Across African Higher Education</p>
+            <p class="mt-1.5 text-[15px] leading-relaxed text-ink-soft">
+              <span class="font-semibold text-ink">Fosu, D. M.</span>, Ali, M. I., Arthur, J., Tetteh, P. D., &amp; Kponyo, J. J.
+            </p>
+            <p class="mt-1 text-[15px] italic text-ink-mute">Pan-African AI and Smart Systems Conference (PA-AISS 2025), Springer LNICST, 571&ndash;588.</p>
+            <p class="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-sm font-medium">
+              <a href="https://doi.org/10.1007/978-3-032-33957-7_34" class="text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent">DOI</a>
+            </p>
+          </li>
+
+          <li class="pub relative pl-8 sm:pl-10">
+            <span class="pub-num absolute left-0 top-1 font-mono text-sm text-ink-mute" aria-hidden="true"></span>
+            <p class="font-serif text-base font-bold leading-snug tracking-tight text-ink">Advancing Responsible Artificial Intelligence Ecosystems in African Higher Education Institutions: A Roadmap for Inclusive Growth and Sustainable Development</p>
+            <p class="mt-1.5 text-[15px] leading-relaxed text-ink-soft">
+              Tetteh, P. D., Arthur, J., <span class="font-semibold text-ink">Fosu, D. M.</span>, Ali, M. I., &amp; Kponyo, J. J.
+            </p>
+            <p class="mt-1 text-[15px] italic text-ink-mute">Pan-African AI and Smart Systems Conference (PA-AISS 2025), Springer LNICST, 529&ndash;544.</p>
+            <p class="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-sm font-medium">
+              <a href="https://doi.org/10.1007/978-3-032-33957-7_31" class="text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent">DOI</a>
+            </p>
+          </li>
+
+        </ol>
+
+        <!-- Preprints -->
+        <h3 class="mt-12 text-xs font-semibold uppercase tracking-[0.16em] text-ink-mute">Preprints</h3>
+        <ol class="mt-6 list-none space-y-8">
+
+          <li class="pub relative pl-8 sm:pl-10">
+            <span class="pub-num absolute left-0 top-1 font-mono text-sm text-ink-mute" aria-hidden="true"></span>
+            <p class="font-serif text-base font-bold leading-snug tracking-tight text-ink">Toward an African Agenda for AI Safety</p>
+            <p class="mt-1.5 text-[15px] leading-relaxed text-ink-soft">
+              Segun, S. T., Adams, R., Florido, A., Timcke, S., Shock, J., Junck, L., Adeleke, F., Grossman, N.,
+              Alayande, A., Kponyo, J. J., Smith, M., <span class="font-semibold text-ink">Fosu, D. M.</span>, &hellip; &amp; Bissyande, T.
+            </p>
+            <p class="mt-1 text-[15px] italic text-ink-mute">arXiv preprint arXiv:2508.13179, 2025.</p>
+            <p class="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-sm font-medium">
+              <a href="https://arxiv.org/abs/2508.13179" class="text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent">arXiv</a>
+            </p>
+          </li>
+
+        </ol>
+
+        <!-- Other writing -->
+        <h3 class="mt-12 text-xs font-semibold uppercase tracking-[0.16em] text-ink-mute">Other Writing</h3>
+        <ol class="mt-6 list-none space-y-8">
+
+          <li class="pub relative pl-8 sm:pl-10">
+            <span class="pub-num absolute left-0 top-1 font-mono text-sm text-ink-mute" aria-hidden="true"></span>
+            <p class="font-serif text-base font-bold leading-snug tracking-tight text-ink">AI Sovereignty in Africa</p>
+            <p class="mt-1 text-[15px] italic text-ink-mute">Blog post, Artificial Intelligence for Development (AI4D).</p>
+            <p class="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-sm font-medium">
+              <a href="https://www.ai4d.ai/blog/ai-sovereignty-in-africa" class="text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent">Read</a>
+            </p>
+          </li>
+
+        </ol>
+      </section>
+
+      <!-- ---------------- TEACHING ---------------- -->
+      <section id="teaching" class="border-b border-gray-200 py-12 sm:py-16">
+        <h2 class="font-serif text-xl font-bold uppercase tracking-tight">Teaching &amp; Mentorship</h2>
+
+        <div class="mt-8 space-y-5">
+
+          <article class="rounded-lg border border-gray-200 bg-paper p-6">
+            <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+              <h3 class="font-serif text-xl font-semibold">Teaching Assistant</h3>
+              <span class="rounded bg-shell px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-ink-mute">Nov 2022 &ndash; Nov 2023</span>
+            </div>
+            <p class="mt-1.5 text-[15px] text-ink-soft">Faculty of Electrical and Computer Engineering, KNUST</p>
+            <ul class="mt-4 space-y-2.5 text-[15px] leading-relaxed text-ink-soft">
+              <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true"></span>Led tutorials for four undergraduate courses averaging 125 students per class.</li>
+              <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true"></span>Graded examinations, assignments and quizzes, and provided one-to-one academic support.</li>
+            </ul>
+          </article>
+
+          <article class="rounded-lg border border-gray-200 bg-paper p-6">
+            <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+              <h3 class="font-serif text-xl font-semibold">Research Mentorship, Responsible AI Lab (RAIL)</h3>
+              <span class="rounded bg-accent-soft px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-accent">Jan 2024 &ndash; Present</span>
+            </div>
+            <p class="mt-1.5 text-[15px] text-ink-soft">Kwame Nkrumah University of Science and Technology, Kumasi</p>
+            <ul class="mt-4 space-y-2.5 text-[15px] leading-relaxed text-ink-soft">
+              <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true"></span>Co-design assistive AI systems for visually and hearing-impaired users within a multidisciplinary team of four researchers.</li>
+              <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true"></span>Contribute to peer-reviewed outputs on AI governance, infrastructure and responsible AI in African higher education.</li>
+            </ul>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ---------------- CONTACT ---------------- -->
+      <section id="contact" class="py-12 sm:py-16">
+        <h2 class="font-serif text-xl font-bold uppercase tracking-tight">Contact</h2>
+        <p class="mt-2 max-w-2xl text-ink-mute">
+          I am always glad to hear about collaborations in cloud-native networking, 5G/6G systems and responsible AI.
+        </p>
+
+        <dl class="mt-8">
+          <dt class="text-xs font-semibold uppercase tracking-[0.16em] text-ink-mute">Email</dt>
+          <dd class="mt-1.5 text-[17px]">
+            <a href="mailto:dmfosu1@st.knust.edu.gh" class="text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent">dmfosu1@st.knust.edu.gh</a>
+          </dd>
+        </dl>
+
+        <h3 class="mt-8 text-xs font-semibold uppercase tracking-[0.16em] text-ink-mute">Elsewhere</h3>
+        <ul class="mt-4 grid gap-2.5 sm:grid-cols-2">
+
+          <li>
+            <a href="https://scholar.google.com/citations?user=xdYRFpgAAAAJ&amp;hl=en" class="group flex items-center gap-3 rounded-lg border border-gray-200 bg-paper px-4 py-3 transition hover:border-accent hover:shadow-sm">
+              <span class="font-mono text-xs font-bold text-accent">GS</span>
+              <span class="font-medium">Google Scholar</span>
+              <span class="ml-auto text-ink-mute transition group-hover:text-accent" aria-hidden="true">&rarr;</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.linkedin.com/in/dmfosu/" class="group flex items-center gap-3 rounded-lg border border-gray-200 bg-paper px-4 py-3 transition hover:border-accent hover:shadow-sm">
+              <span class="font-mono text-xs font-bold text-accent">in</span>
+              <span class="font-medium">LinkedIn</span>
+              <span class="ml-auto text-ink-mute transition group-hover:text-accent" aria-hidden="true">&rarr;</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://orcid.org/0009-0005-3984-6139" class="group flex items-center gap-3 rounded-lg border border-gray-200 bg-paper px-4 py-3 transition hover:border-accent hover:shadow-sm">
+              <span class="font-mono text-xs font-bold text-accent">iD</span>
+              <span class="font-medium">ORCID</span>
+              <span class="ml-auto text-ink-mute transition group-hover:text-accent" aria-hidden="true">&rarr;</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://github.com/dmfosu-dev" class="group flex items-center gap-3 rounded-lg border border-gray-200 bg-paper px-4 py-3 transition hover:border-accent hover:shadow-sm">
+              <span class="font-mono text-xs font-bold text-accent">{ }</span>
+              <span class="font-medium">GitHub</span>
+              <span class="ml-auto text-ink-mute transition group-hover:text-accent" aria-hidden="true">&rarr;</span>
+            </a>
+          </li>
+
+        </ul>
+      </section>
+
+      <footer class="border-t border-gray-200 py-8 text-sm text-ink-mute">
+        <p>&copy; <span id="year">2026</span> Dickson Marfo Fosu</p>
+        <p class="mt-1">Kwame Nkrumah University of Science and Technology, Kumasi, Ghana</p>
+      </footer>
+
+    </div>
+  </main>
+
+</div>
+
+<script>
+  // Mobile navigation toggle.
+  (function () {
+    var toggle = document.getElementById('navToggle');
+    var menu = document.getElementById('mobileMenu');
+
+    toggle.addEventListener('click', function () {
+      var open = menu.hidden;
+      menu.hidden = !open;
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+
+    // Close the menu after tapping a section link.
+    menu.addEventListener('click', function (e) {
+      if (e.target.closest('a')) {
+        menu.hidden = true;
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  })();
+
+  // Recent Updates: reveal four entries at a time, and clamp each summary to four
+  // lines with a Read more toggle. Runs only if JS is available; without it every
+  // entry and the full text of each are visible, which is the safe fallback.
+  (function () {
+    var list = document.getElementById('newsList');
+    var more = document.getElementById('newsMore');
+    if (!list || !more) return;
+
+    var cards = Array.prototype.slice.call(list.children);
+    var STEP = 4;
+    var shown = 0;
+
+    // Show the toggle only when the text genuinely overflows its four lines.
+    function syncToggle(card) {
+      var text = card.querySelector('.update-text');
+      var btn = card.querySelector('.update-toggle');
+      if (!text || !btn || text.classList.contains('is-open')) return;
+      btn.hidden = text.scrollHeight <= text.clientHeight + 1;
+    }
+
+    function revealNext() {
+      cards.slice(shown, shown + STEP).forEach(function (card) {
+        card.hidden = false;
+        syncToggle(card);
+      });
+      shown = Math.min(shown + STEP, cards.length);
+      more.hidden = shown >= cards.length;
+    }
+
+    cards.forEach(function (card) { card.hidden = true; });
+    revealNext();
+
+    more.addEventListener('click', revealNext);
+
+    list.addEventListener('click', function (e) {
+      var btn = e.target.closest('.update-toggle');
+      if (!btn) return;
+      var text = btn.parentNode.querySelector('.update-text');
+      var open = text.classList.toggle('is-open');
+      btn.textContent = open ? 'Show less' : 'Read more';
+    });
+
+    // Line height depends on the webfont, so re-measure once it has loaded.
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(function () {
+        cards.forEach(function (card) { if (!card.hidden) syncToggle(card); });
+      });
+    }
+    window.addEventListener('resize', function () {
+      cards.forEach(function (card) { if (!card.hidden) syncToggle(card); });
+    });
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+# Files that stay on this machine and are NOT published.
+# Everything a repo contains is publicly downloadable, whether or not the site links it.
+
+# Contains a phone number and two referees' email addresses.
+# The site deliberately does not link the CV, so it must not ship either.
+Fosu_CV.pdf
+
+# Working notes for Claude Code, not site content.
+CLAUDE.md
+
+# Superdesign project files: drafts, design system, temp JSON.
+.superdesign/
+
+# Unused duplicate of headshot.png (brackets escaped: they are glob syntax here).
+Photo_Dickson \[1_1\].png
+
+# OS and editor noise.
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/
